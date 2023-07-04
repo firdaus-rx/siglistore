@@ -1,0 +1,174 @@
+:root {
+    --headingFont : 'Merriweather';
+    --mainFont: 'Open Sans', sans-serif;
+    --primaryColor: #002939;
+    --secondaryColor: #DDC190;
+}
+
+body {
+    font-family: var(--mainFont);
+}
+
+.heading {
+    font-family: var(--headingFont);
+    color: var(--secondaryColor);
+    font-weight: 900 !important;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primaryColor) !important;
+}
+
+.navbar-brand {
+    font-weight: 900;
+}
+
+.navbar-brand span{
+    color: var(--secondaryColor);
+}
+
+.nav-item .active {
+    font-family: var(--headingFont);
+    font-weight: 700;
+    color: var(--secondaryColor) !important;
+}
+
+.icons-nav a{
+    color: var(--secondaryColor);
+}
+
+/* Main Section */
+
+.main {
+    padding-top: 17px;
+    background-color: var(--primaryColor);
+}
+
+/* Service Section */
+.service .card-service {
+    border: 2px solid;
+    background-color: var(--primaryColor);
+}
+
+.btn-Primary {
+    color: var(--secondaryColor);
+    border: 2px solid var(--secondaryColor);
+}
+
+.card-banner {
+    background-color: var(--primaryColor);
+}
+
+.img-banner img {
+    width: 50%;
+}
+
+/* Section Product */
+.slide-btn {
+    color: var(--secondaryColor);    
+}
+
+.card-product {
+    width: 300px;
+}
+
+.product-img {
+    border: 2px solid var(--primaryColor);
+}
+
+.color-Primary {
+    background-color: var(--primaryColor);
+}
+
+/* New Product */
+
+.img-product {
+    background-color: var(--primaryColor);
+}
+
+.new-product .card-title {
+    font-family: var(--headingFont);
+    font-weight: 700;
+}
+
+.btn-Secondary {
+    background-color: var(--primaryColor);
+}
+
+.new-card {
+    display: none;
+}
+
+/* Section Contact */
+
+.contact .card-contact {
+    background-color: var(--primaryColor);
+}
+
+.contact .contact-cons i {
+    color: var(--secondaryColor);
+    font-size: 80px;
+}   
+
+
+/* Section team */
+.team .card-team {
+    background-color: var(--primaryColor);
+}
+
+.team .card-img img {
+    background-color: var(--secondaryColor);
+}
+
+.team .sosial i {
+    font-size: 3.2rem !important;
+    color: var(--secondaryColor);
+}
+
+
+footer {
+    background-color: var(--primaryColor);
+}
+
+footer span {
+    color: var(--secondaryColor);
+}
+
+footer strong {
+    font-family: var(--headingFont);
+}
+
+
+/* Float Wa */
+.Whatsapp .wa i {
+    font-size: 5em;
+    color: green;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    z-index: 100;
+}
+
+
+/* Untuk Login */
+
+.login-body {
+    background-color: var(--primaryColor);
+}
+
+.auth {
+    padding-top: 10vh;
+}
+/*  */
+.konten-kanan {
+    background-color: #fff;
+}
+
+/* Style belanja */
+
+.card-sos {
+    color: #fff;
+    background-color: var(--primaryColor);
+}
+
