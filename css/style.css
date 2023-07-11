@@ -1,5 +1,5 @@
 :root {
-    --headingFont : 'Merriweather';
+    --headingFont: 'Merriweather';
     --mainFont: 'Open Sans', sans-serif;
     --primaryColor: #002939;
     --secondaryColor: #DDC190;
@@ -15,7 +15,10 @@ body {
     font-weight: 900 !important;
 }
 
-/* Navbar */
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+
 .navbar {
     background-color: var(--primaryColor) !important;
 }
@@ -24,7 +27,7 @@ body {
     font-weight: 900;
 }
 
-.navbar-brand span{
+.navbar-brand span {
     color: var(--secondaryColor);
 }
 
@@ -34,18 +37,228 @@ body {
     color: var(--secondaryColor) !important;
 }
 
-.icons-nav a{
+.icons-nav a {
     color: var(--secondaryColor);
 }
 
-/* Main Section */
 
-.main {
-    padding-top: 17px;
-    background-color: var(--primaryColor);
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+    width: 100%;
+    background: url("../img/hero-bg.jpg");
+    position: relative;
+    padding: 120px 0 0 0;
 }
 
-/* Service Section */
+#hero:before {
+    content: "";
+    background: var(--primaryColor);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#hero h1 {
+    margin: 0 0 20px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#hero h1 span {
+    color: #fff;
+    border-bottom: 4px solid var(--secondaryColor);
+}
+
+#hero h2 {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+#hero .btn-get-started {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: var(--secondaryColor);
+}
+
+#hero .btn-get-started:hover {
+    background: #17b57d;
+}
+
+#hero .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (min-width: 1024px) {
+    #hero {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 991px) {
+    #hero {
+        padding-top: 80px;
+    }
+
+    #hero .animated {
+        -webkit-animation: none;
+        animation: none;
+    }
+
+    #hero .hero-img {
+        text-align: center;
+    }
+
+    #hero .hero-img img {
+        max-width: 50%;
+    }
+
+    #hero h1 {
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 10px;
+    }
+
+    #hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    #hero .hero-img img {
+        width: 80%;
+    }
+}
+
+@-webkit-keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.hero-waves {
+    display: block;
+    margin-top: 60px;
+    width: 100%;
+    height: 60px;
+    z-index: 5;
+    position: relative;
+}
+
+.wave1 use {
+    -webkit-animation: move-forever1 10s linear infinite;
+    animation: move-forever1 10s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+}
+
+.wave2 use {
+    -webkit-animation: move-forever2 8s linear infinite;
+    animation: move-forever2 8s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+}
+
+.wave3 use {
+    -webkit-animation: move-forever3 6s linear infinite;
+    animation: move-forever3 6s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+}
+
+@-webkit-keyframes move-forever1 {
+    0% {
+        transform: translate(85px, 0%);
+    }
+
+    100% {
+        transform: translate(-90px, 0%);
+    }
+}
+
+@keyframes move-forever1 {
+    0% {
+        transform: translate(85px, 0%);
+    }
+
+    100% {
+        transform: translate(-90px, 0%);
+    }
+}
+
+@-webkit-keyframes move-forever2 {
+    0% {
+        transform: translate(-90px, 0%);
+    }
+
+    100% {
+        transform: translate(85px, 0%);
+    }
+}
+
+@keyframes move-forever2 {
+    0% {
+        transform: translate(-90px, 0%);
+    }
+
+    100% {
+        transform: translate(85px, 0%);
+    }
+}
+
+@-webkit-keyframes move-forever3 {
+    0% {
+        transform: translate(-90px, 0%);
+    }
+
+    100% {
+        transform: translate(85px, 0%);
+    }
+}
+
+@keyframes move-forever3 {
+    0% {
+        transform: translate(-90px, 0%);
+    }
+
+    100% {
+        transform: translate(85px, 0%);
+    }
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+
 .service .card-service {
     border: 2px solid;
     background-color: var(--primaryColor);
@@ -64,9 +277,12 @@ body {
     width: 50%;
 }
 
-/* Section Product */
+/*--------------------------------------------------------------
+# Product
+--------------------------------------------------------------*/
+
 .slide-btn {
-    color: var(--secondaryColor);    
+    color: var(--secondaryColor);
 }
 
 .card-product {
@@ -80,8 +296,6 @@ body {
 .color-Primary {
     background-color: var(--primaryColor);
 }
-
-/* New Product */
 
 .img-product {
     background-color: var(--primaryColor);
@@ -100,19 +314,9 @@ body {
     display: none;
 }
 
-/* Section Contact */
-
-.contact .card-contact {
-    background-color: var(--primaryColor);
-}
-
-.contact .contact-cons i {
-    color: var(--secondaryColor);
-    font-size: 80px;
-}   
-
-
-/* Section team */
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
 .team .card-team {
     background-color: var(--primaryColor);
 }
@@ -139,8 +343,9 @@ footer strong {
     font-family: var(--headingFont);
 }
 
-
-/* Float Wa */
+/*--------------------------------------------------------------
+# Float WA
+--------------------------------------------------------------*/
 .Whatsapp .wa i {
     font-size: 5em;
     color: green;
@@ -150,8 +355,9 @@ footer strong {
     z-index: 100;
 }
 
-
-/* Untuk Login */
+/*--------------------------------------------------------------
+# Login
+--------------------------------------------------------------*/
 
 .login-body {
     background-color: var(--primaryColor);
@@ -160,12 +366,10 @@ footer strong {
 .auth {
     padding-top: 10vh;
 }
-/*  */
+
 .konten-kanan {
     background-color: #fff;
 }
-
-/* Style belanja */
 
 .card-sos {
     color: #fff;
@@ -176,12 +380,16 @@ footer strong {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+#contact {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
 .contact .info {
     width: 100%;
     background: #fff;
-  }
-  
-  .contact .info i {
+}
+
+.contact .info i {
     font-size: 20px;
     color: #3f43fd;
     float: left;
@@ -193,60 +401,60 @@ footer strong {
     align-items: center;
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
-  }
-  
-  .contact .info h4 {
+}
+
+.contact .info h4 {
     padding: 0 0 0 60px;
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 5px;
     color: #010483;
-  }
-  
-  .contact .info p {
+}
+
+.contact .info p {
     padding: 0 0 0 60px;
     margin-bottom: 0;
     font-size: 14px;
     color: #0205a1;
-  }
-  
-  .contact .info .email,
-  .contact .info .phone {
+}
+
+.contact .info .email,
+.contact .info .phone {
     margin-top: 40px;
-  }
-  
-  .contact .info .email:hover i,
-  .contact .info .address:hover i,
-  .contact .info .phone:hover i {
-    background: #febb1b;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+    background: var(--secondaryColor);
     color: #fff;
-  }
-  
-  @-webkit-keyframes animate-loading {
+}
+
+@-webkit-keyframes animate-loading {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-  
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  @keyframes animate-loading {
+}
+
+@keyframes animate-loading {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-  
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  .section-title h2::after {
+}
+
+.section-title h2::after {
     content: "";
     width: 120px;
     height: 1px;
     display: inline-block;
-    background: #febb1b;
+    background: var(--secondaryColor);
     margin: 4px 10px;
-  }
+}
